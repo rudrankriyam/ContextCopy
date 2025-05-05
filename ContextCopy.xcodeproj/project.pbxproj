@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C2E216002BE938DF00A506EA /* CodeCopyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E215FF2BE938DF00A506EA /* CodeCopyApp.swift */; };
+		C2E216002BE938DF00A506EA /* ContextCopyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E215FF2BE938DF00A506EA /* ContextCopyApp.swift */; };
 		C2E216022BE938DF00A506EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E216012BE938DF00A506EA /* ContentView.swift */; };
 		C2E216042BE938E000A506EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E216032BE938E000A506EA /* Assets.xcassets */; };
 		C2E216072BE938E000A506EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E216062BE938E000A506EA /* Preview Assets.xcassets */; };
@@ -19,8 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C2E215FC2BE938DF00A506EA /* CodeCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2E215FF2BE938DF00A506EA /* CodeCopyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCopyApp.swift; sourceTree = "<group>"; };
+		C2E215FC2BE938DF00A506EA /* ContextCopy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContextCopy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2E215FF2BE938DF00A506EA /* ContextCopyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextCopyApp.swift; sourceTree = "<group>"; };
 		C2E216012BE938DF00A506EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C2E216032BE938E000A506EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2E216062BE938E000A506EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		C2E215F32BE938DF00A506EA = {
 			isa = PBXGroup;
 			children = (
-				C2E215FE2BE938DF00A506EA /* CodeCopy */,
+				C2E215FE2BE938DF00A506EA /* ContextCopy */,
 				C2E215FD2BE938DF00A506EA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,15 +54,15 @@
 		C2E215FD2BE938DF00A506EA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C2E215FC2BE938DF00A506EA /* CodeCopy.app */,
+				C2E215FC2BE938DF00A506EA /* ContextCopy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C2E215FE2BE938DF00A506EA /* CodeCopy */ = {
+		C2E215FE2BE938DF00A506EA /* ContextCopy */ = {
 			isa = PBXGroup;
 			children = (
-				C2E215FF2BE938DF00A506EA /* CodeCopyApp.swift */,
+				C2E215FF2BE938DF00A506EA /* ContextCopyApp.swift */,
 				C2E216012BE938DF00A506EA /* ContentView.swift */,
 				C2E2161D2BE93FE200A506EA /* Learnings.swift */,
 				C2E216112BE93A2300A506EA /* Roadmap.swift */,
@@ -72,7 +72,7 @@
 				C2E216082BE938E000A506EA /* CodeCopy.entitlements */,
 				C2E216052BE938E000A506EA /* Preview Content */,
 			);
-			path = CodeCopy;
+			path = ContextCopy;
 			sourceTree = "<group>";
 		};
 		C2E216052BE938E000A506EA /* Preview Content */ = {
@@ -86,9 +86,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C2E215FB2BE938DF00A506EA /* CodeCopy */ = {
+		C2E215FB2BE938DF00A506EA /* ContextCopy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C2E2160B2BE938E000A506EA /* Build configuration list for PBXNativeTarget "CodeCopy" */;
+			buildConfigurationList = C2E2160B2BE938E000A506EA /* Build configuration list for PBXNativeTarget "ContextCopy" */;
 			buildPhases = (
 				C2E215F82BE938DF00A506EA /* Sources */,
 				C2E215F92BE938DF00A506EA /* Frameworks */,
@@ -98,12 +98,12 @@
 			);
 			dependencies = (
 			);
-			name = CodeCopy;
+			name = ContextCopy;
 			packageProductDependencies = (
 				C2E2160F2BE93A0500A506EA /* Roadmap */,
 			);
 			productName = "Deep Dish Demo";
-			productReference = C2E215FC2BE938DF00A506EA /* CodeCopy.app */;
+			productReference = C2E215FC2BE938DF00A506EA /* ContextCopy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -121,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C2E215F72BE938DF00A506EA /* Build configuration list for PBXProject "CodeCopy" */;
+			buildConfigurationList = C2E215F72BE938DF00A506EA /* Build configuration list for PBXProject "ContextCopy" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -137,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C2E215FB2BE938DF00A506EA /* CodeCopy */,
+				C2E215FB2BE938DF00A506EA /* ContextCopy */,
 			);
 		};
 /* End PBXProject section */
@@ -164,7 +164,7 @@
 				C2E2161C2BE93C4300A506EA /* SmallButton.swift in Sources */,
 				C2E216022BE938DF00A506EA /* ContentView.swift in Sources */,
 				C2E2161E2BE93FE200A506EA /* Learnings.swift in Sources */,
-				C2E216002BE938DF00A506EA /* CodeCopyApp.swift in Sources */,
+				C2E216002BE938DF00A506EA /* ContextCopyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,16 +294,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CodeCopy/CodeCopy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ContextCopy/ContextCopy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CodeCopy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ContextCopy/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = CodeCopy;
+				INFOPLIST_KEY_CFBundleDisplayName = "ContextCopy";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -323,16 +323,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CodeCopy/CodeCopy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ContextCopy/ContextCopy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CodeCopy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ContextCopy/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = CodeCopy;
+				INFOPLIST_KEY_CFBundleDisplayName = "ContextCopy";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -350,7 +350,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C2E215F72BE938DF00A506EA /* Build configuration list for PBXProject "CodeCopy" */ = {
+		C2E215F72BE938DF00A506EA /* Build configuration list for PBXProject "ContextCopy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C2E216092BE938E000A506EA /* Debug */,
@@ -359,7 +359,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C2E2160B2BE938E000A506EA /* Build configuration list for PBXNativeTarget "CodeCopy" */ = {
+		C2E2160B2BE938E000A506EA /* Build configuration list for PBXNativeTarget "ContextCopy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C2E2160C2BE938E000A506EA /* Debug */,
