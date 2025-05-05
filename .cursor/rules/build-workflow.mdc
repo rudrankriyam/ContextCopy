@@ -1,0 +1,14 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Build Workflow
+
+When developing a new feature or fixing a bug, always follow this sequence:
+
+1.  **Clean:** Clean the build artifacts to ensure a fresh state.
+2.  **Rebuild:** Build the project again.
+3.  **Run:** Launch the application to test the changes.
+
+This helps prevent issues caused by stale build caches.
