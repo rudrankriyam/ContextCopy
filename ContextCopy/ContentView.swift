@@ -111,25 +111,30 @@ struct ContentView: View {
               .padding(.horizontal)
 
             List {
-              ForEach(filteredFiles, id: \.self) { file in
-                HStack {
-                  Toggle(
-                    isOn: Binding(
-                      get: { selectedFiles.contains(file) },
-                      set: { isOn in
-                        if isOn {
-                          selectedFiles.insert(file)
-                        } else {
-                          selectedFiles.remove(file)
-                        }
-                        updateCombinedText()
-                      }
-                    )
-                  ) {
+              // Iterate through sorted keys (extensions) for consistent order
+              ForEach(filteredFilesGrouped.keys.sorted(), id: \.self) { ext in
+                Section(header: Text(ext.isEmpty ? "(No Extension)" : ext.uppercased())) {
+                  ForEach(filteredFilesGrouped[ext] ?? [], id: \.self) { file in
                     HStack {
-                      fileIcon(for: file.pathExtension)
-                      Text(file.lastPathComponent)
-                        .truncationMode(.middle)
+                      Toggle(
+                        isOn: Binding(
+                          get: { selectedFiles.contains(file) },
+                          set: { isOn in
+                            if isOn {
+                              selectedFiles.insert(file)
+                            } else {
+                              selectedFiles.remove(file)
+                            }
+                            updateCombinedText()
+                          }
+                        )
+                      ) {
+                        HStack {
+                          fileIcon(for: file.pathExtension)
+                          Text(file.lastPathComponent)
+                            .truncationMode(.middle)
+                        }
+                      }
                     }
                   }
                 }
@@ -223,15 +228,35 @@ struct ContentView: View {
     updateCombinedText()
   }
 
-  var filteredFiles: [URL] {
-    if selectedExtensions.isEmpty {
-      return []  // Or return allFiles if you prefer that behavior when no extensions are selected
-    }
-    return allFiles.filter { fileURL in
+  var filteredFilesGrouped: [String: [URL]] {
+    var grouped: [String: [URL]] = [:]
+
+    let filesToFilter = allFiles.filter { fileURL in
       let fileExtension = fileURL.pathExtension.lowercased()
       return selectedExtensions.contains(fileExtension)
-        || (fileExtension.isEmpty && selectedExtensions.contains(""))  // Handle files with no extension
+        || (fileExtension.isEmpty && selectedExtensions.contains(""))
     }
+
+    for file in filesToFilter {
+      let ext = file.pathExtension.lowercased()
+      if grouped[ext] == nil {
+        grouped[ext] = []
+      }
+      grouped[ext]?.append(file)
+    }
+
+    // Sort files within each group alphabetically
+    for (ext, files) in grouped {
+      grouped[ext] = files.sorted {
+        $0.lastPathComponent.localizedStandardCompare($1.lastPathComponent) == .orderedAscending
+      }
+    }
+
+    return grouped
+  }
+
+  var filteredFiles: [URL] {  // Keep this for compatibility with updateSelectedFilesBasedOnFilter for now, or refactor updateSelectedFilesBasedOnFilter later
+    return filteredFilesGrouped.values.flatMap { $0 }
   }
 
   private func updateCombinedText() {
