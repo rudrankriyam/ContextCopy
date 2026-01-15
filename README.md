@@ -1,4 +1,6 @@
 # ContextCopy
+[![Star History Chart](https://api.star-history.com/svg?repos=rudrankriyam/ContextCopy&type=Date)](https://star-history.com/#rudrankriyam/ContextCopy&Date)
+
 
 A macOS utility to combine text from selected files.
 
